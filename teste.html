@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinic Care</title>
+    <link rel="stylesheet" href="teste.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">ClinicCare</div>
+        <button class="navbar-toggle" aria-label="Toggle Navigation">☰</button>
+        <div class="menuDropdown">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h1>Your Health, Our Priority</h1>
+        <p>Providing top-tier care for your wellness and health.</p>
+        <a href="#services" class="btn">Explore Services</a>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are a team of healthcare professionals dedicated to providing compassionate and high-quality care for all ages.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="services-grid">
+            <div class="service">
+                <h3>General Checkup</h3>
+                <p>Comprehensive health assessments for all age groups.</p>
+            </div>
+            <div class="service">
+                <h3>Pediatric Care</h3>
+                <p>Specialized healthcare services for children.</p>
+            </div>
+            <div class="service">
+                <h3>Emergency Care</h3>
+                <p>Immediate medical attention for urgent conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>123 Health St, Wellness City</p>
+        <p>Email: contact@clinicare.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 ClinicCare. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const navbarToggle = document.querySelector('.navbar-toggle');
+        const navLinks = document.querySelector('.menuDropdown');
+
+        navbarToggle.addEventListener('click', () => {
+            if (navLinks.style.display === 'block') {
+            navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'block';
+            }
+    });
+    </script>
+</body>
+</html>

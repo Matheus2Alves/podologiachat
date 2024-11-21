@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario Agendamento</title>
+    <link rel="stylesheet" href="./style/agenda.css">
+</head>
+<body>
+
+<div id="container">
+    <div id="header">
+        <div id="monthDisplay"></div>
+        <div>
+            <button id="nextButton">Próximo</button>
+            <button id="backButton">Voltar</button>
+        </div>
+    </div>
+
+    <div id="weekdays">
+        <div>Domingo</div>
+        <div>Segunda</div>
+        <div>Terça</div>
+        <div>Quarta</div>
+        <div>Quinta</div>
+        <div>Sexta</div>
+        <div>Sábado</div>
+    </div>
+
+    <div id="calendar"></div>
+</div>
+
+<!-- Event creation section -->
+<div id="eventCreation">
+    <button class="theme" id="theme-toggle">Mudar tema</button>
+    <div>
+        <label for="yearSelect">Escolha o ano:</label>
+        <select id="yearSelect"></select>
+    </div>
+    
+    <div>
+        <label for="monthSelect">Escolha o mês:</label>
+        <select id="monthSelect">
+            <option value="0">Janeiro</option>
+            <option value="1">Fevereiro</option>
+            <option value="2">Março</option>
+            <option value="3">Abril</option>
+            <option value="4">Maio</option>
+            <option value="5">Junho</option>
+            <option value="6">Julho</option>
+            <option value="7">Agosto</option>
+            <option value="8">Setembro</option>
+            <option value="9">Outubro</option>
+            <option value="10">Novembro</option>
+            <option value="11">Dezembro</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="daySelect">Escolha o dia:</label>
+        <select id="daySelect"></select>
+    </div>
+    
+    <div>
+      <label for="timeSelect">Escolha a hora:</label>
+      <input type="time" id="timeSelect">
+    </div>
+    
+    <div>
+        <label for="eventTitleInput">Título do Evento:</label>
+        <input type="text" id="eventTitleInput" placeholder="Digite o título do evento">
+    </div>
+    
+    <button id="createEventButton">Criar Evento</button>
+    <div id="lgpdAviso">
+        <p>Seus dados não serão armazenados e serão utilizados exclusivamente para os fins aos quais foram fornecidos, em conformidade com a <a href="https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm" target="blank" class="LGPD">Lei Geral de Proteção de Dados (LGPD).</a></p>
+    </div>
+</div>
+
+<!-- Existing modals -->
+<div id="newEventModal">
+    <h2>Novo Evento</h2>
+    <input id="eventTitleInput" placeholder="Título do Evento" />
+    <button id="saveButton">Salvar</button>
+    <button id="cancelButton">Cancelar</button>
+</div>
+
+<div id="deleteEventModal">
+    <h2>Evento</h2>
+    <p id="eventText"></p>
+    <button id="deleteButton">Excluir</button>
+    <button id="closeButton">Fechar</button>
+</div>
+
+<div id="modalBackDrop"></div>
+
+<script src="./script/mudartema.js"></script>
+<script type="module" src="./script/agenda.js"></script>
+<script type="module" src="./script/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+* {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+#chatbox {
+    display: flex;
+    border-radius: 10px;
+    align-items: flex-start;
+    background-color: #ffffff;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    padding: 25px;
+    margin: 10px;
+    height: 500px;
+    border: 1px solid #ffffff;
+    overflow-y: scroll;
+}
+
+#chatbox::-webkit-scrollbar {
+    display: none;
+}
+
+#chatbox.dark-mode {
+    background-color: black;
+    border: black;
+}
+.user {
+    align-self: flex-end;
+    text-align: right;
+    width: auto;
+    margin: 4px 0px;
+    max-width: 275px;
+    background-color: #ffb6c1;
+    border-radius: 10px;
+    padding: 4px 8px 4px 8px;
+    color: rgb(0, 0, 0);
+}
+.bot {
+    text-align: left;
+    width: auto;
+    margin: 4px 0px;
+    width: 55%;
+    max-width: 600px;
+    background-color: #fdd9de;
+    border-radius: 10px;
+    padding: 8px;
+    color: rgb(0, 0, 0);
+}
+
+
+.box-options {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, minmax(100px, 200px)); /* Columns will be at least 150px but can grow */
+    grid-template-rows: auto auto; /* 2 rows */
+    gap: 5px; /* Gap between the grid items */
+    width: 100%; /* Full width of the container */
+    max-width: 600px; /* Optional: limit the total grid width */
+}
+
+
+/*.box-options {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto auto;  
+    gap: 5px; 
+    width: 100%;
+}*/
+
+
+
+.options {
+    background-color: #f17588;
+    text-align: center;
+    width: 100px;
+    border-radius: 15px;
+    padding: 7px;
+    margin: 4px;
+    border: none;
+    color: white;
+}
+
+.options:hover {
+    cursor: pointer;
+    background-color: #ffb6c1;
+}
+
+#userInput {
+    display: none;
+    width: 220px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#userInput:focus {
+    border-color: #ffb6c1; /* Change border color on focus */
+    background-color: #fff; /* Change background color on focus */
+}
+  
+#userInput::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+#monthSelect, #daySelect, #timeSelect {
+    display: block;
+    width: 120px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+#enviar, #enviarDia, #enviarHora {
+    background-color: #07667e;
+    color: white;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+#submitButton {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+#lgpdAviso {
+    font-size: large;
+    width: 350px;
+    font-weight: 700;
+    color: rgb(3, 0, 0);
+  }
+
+#lgpdAviso.dark-mode {
+    background-color: black;
+    color: white;
+}
+  
+  .LGPD {
+    text-decoration: underline;
+    color: #92a1d1;
+  }
+
+.theme, #submitButton {
+    margin: 20px;
+    padding: 10px;
+    background-color: #f17588;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+.theme:hover {
+    background-color: #f17588;
+  }
